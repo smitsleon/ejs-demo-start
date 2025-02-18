@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Mijn eerste EJS applicatie</title>
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <hr>
+    <p>
+        <%= content %>
+    </p>
+    <hr>
+    <% if (team) { %>
+        <h3>Maak kennis met het team</h3>
+        <ul>
+            <% team.forEach(dino=> { %>
+                <li>
+                <%- dino %> <!-- -teken zorgt ervoor dat je de strong tag in de pagecontroller kunt zien, maar voorkeur is altijd = want is minder hackgevoelig  -->
+                </li>
+                <% }); %>
+        </ul>
+        <% } %>
+</body>
+
+</html>
