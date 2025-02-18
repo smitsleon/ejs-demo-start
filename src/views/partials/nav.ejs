@@ -1,0 +1,11 @@
+<nav class="primary">
+    <ul>
+        <% navItems.forEach(nav => { %>
+            <li>
+                <a href="<%= nav.url %>">
+                    <%= nav.label %>
+                </a>
+            </li>
+        <% }); %>
+    </ul>
+</nav>
