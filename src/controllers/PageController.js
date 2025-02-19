@@ -1,5 +1,6 @@
 import { person } from "../data/data.js";
 import { navItems } from "../data/data.js";
+import { dinosaurs } from "../data/data.js";
 
 export const home = (req, res)=> {
     res.render("pages/home", {
@@ -32,6 +33,14 @@ export const privacy = (req, res)=> {
         title: "Privacy Policy",
         content: "Dinosaurs are protective of their privacy",
         team: false,
+        navItems,
+    })
+};
+
+export const allDinosaurs = (req, res) => {
+    res.render("pages/dinosaurs", {
+        title: "Dinosaurs around the world",
+        dinosaurs,
         navItems,
     })
 };

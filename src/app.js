@@ -3,7 +3,7 @@ import express from "express";
 import expressLayouts from "express-ejs-layouts";
 import path from "path";
 
-import {home, about, contact, privacy} from "./controllers/PageController.js";
+import {home, about, contact, privacy, allDinosaurs} from "./controllers/PageController.js";
 
 // create an instance of express
 const app = express();
@@ -24,6 +24,7 @@ app.get("/", home)
 app.get("/about", about)
 app.get("/contact", contact)
 app.get("/privacy", privacy)
+app.get("/dinosaurs", allDinosaurs)
 
 app.get("*", (req, res) => {
   res.status(404).render("errors/404", {
